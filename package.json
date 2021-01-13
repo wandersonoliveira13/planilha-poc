@@ -1,0 +1,10 @@
+{
+  "name": "PLANILHA-POC",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Wnaderson Oliveira",
+  "license": "MIT",
+  "dependencies": {
+    "google-spreadsheet": "^3.1.15"
+  }
+}

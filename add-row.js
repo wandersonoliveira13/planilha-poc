@@ -1,5 +1,4 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet')
-<<<<<<< HEAD
 const credencial = require('./credencial.json')
 
 const doc = new GoogleSpreadsheet('1Yeh83fHZ6dmjmH1I-YWPKbcGBa0qnRjuEvTcmRVhgno')
@@ -24,32 +23,3 @@ const run = async() => {
 }
 
 run()
-=======
-
-const credencials = require('./credencials.json')
-
-const doc = new GoogleSpreadsheet('1Yeh83fHZ6dmjmH1I-YWPKbcGBa0qnRjuEvTcmRVhgno')
-
-const run = async() => {
-    try{
-        await doc.useServiceAccountAuth(credencials);
-        await doc.loadInfo();
-        console.log(doc.title);
-
-        const sheet = doc.sheetsByIndex[0]
-        // Nome	Email	Whatsapp	Cupom	Promo
-        await sheet.addRow({
-            Nome: 'Wanderson Oliveira',
-            Email: 'wanderson_fla10@hotmail.com',
-            Whatsapp:'61 981474383',
-            Cupom: 'GOLD10',
-            Promo:'ESSA É A PROMO'
-
-        })
-    }catch(err) {
-        console.log(err);
-    }
-}
-
-run()
->>>>>>> 17076ee00fe3a226f5599ee80f87f3448560b276
